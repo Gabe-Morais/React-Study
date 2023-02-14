@@ -4,8 +4,6 @@
 
 ###
 
-<br clear="both">
-
 <p align="left">Repository for my React and TypeScript studies</p>
 
 ###
@@ -18,22 +16,16 @@
 
 ###
 
-<br clear="both">
-
 <div align="center">
   <img height="200" src="https://miro.medium.com/v2/resize:fit:720/1*e-CnQ3XcOSjznpnBhMXQKg.gif"  />
 </div>
 
 ###
 
-<br clear="both">
-
-<p align="left">Oque é o React?</p>
+<p align="left">What is React</p>
 
 ###
 
-<br clear="both">
-
-<h6 align="left">O React é a biblioteca mais popular do JavaScript e é usada para construir uma interface de usuário (IU). Ela oferece uma resposta excelente para o usuário adicionar comandos usando um novo método de renderizar sites.</h6>
+<h6 align="left">The React.js framework is an open-source JavaScript framework and library developed by Facebook. It’s used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript.</h6>
 
 ###
