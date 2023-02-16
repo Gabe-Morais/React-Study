@@ -22,7 +22,7 @@
 
 ###
 
-<p align="left">What is React</p>
+<p align="left">What is React?</p>
 
 ###
 
