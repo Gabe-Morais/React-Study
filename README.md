@@ -4,7 +4,7 @@
 
 ###
 
-<p align="left">Repository for my React and TypeScript studies</p>
+<p align="left">Repository for my React studies</p>
 
 ###
 
