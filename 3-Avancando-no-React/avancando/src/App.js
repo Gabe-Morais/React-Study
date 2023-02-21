@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 
 import City from './assets/city.jpg';
+import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
@@ -33,7 +34,10 @@ function App() {
       <ConditionalRender/>
       <br/>
       <br/>
+      {/* props */}
       <ShowUserName name={userName}/>
+      {/* destructuring */}
+      <CarDetails brand="VW" km={100000} color="Azul"/>
 
     </div>
   );
