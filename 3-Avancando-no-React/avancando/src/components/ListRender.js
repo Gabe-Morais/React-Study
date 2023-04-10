@@ -18,12 +18,17 @@ const ListRender = () => {
 
   return (
     <div>
-      {/* render sem key primeiramente */}
-      <ul>
+      {/* render primeiramente utilizando o index(indice) do map como key */}
+
+      {/* Utilizar indice como key é uma má pratica, porque caso delete alguma informação outro
+       dado passa a ter a key do dado deletado, exmeplo:
+      se eu deletar o "João" que tem o indice de 1, o "Lucas" ira pegar o indice de 1 agora */}
+      <ul> 
         {list.map((item, i) => (
           <li key={i}>{item}</li>
         ))}
       </ul>
+
       <ul>
         {users.map((user) => (
           <li key={user.id}>
@@ -31,6 +36,7 @@ const ListRender = () => {
           </li>
         ))}
       </ul>
+      {/* Deleta um usuario aleatorio utilizando o "Math.random" */}
       <button onClick={deleteRandom}>Delete random user</button>
     </div>
   );

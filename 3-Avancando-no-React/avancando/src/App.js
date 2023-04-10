@@ -38,7 +38,10 @@ function App() {
         <img src={City} alt="Cidade" />
       </div>
       <ManageData/>
+
+      {/* Renderiza uma lista */}
       <ListRender/>
+
       <ConditionalRender/>
       <br/>
       <br/>
