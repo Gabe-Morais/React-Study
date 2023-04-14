@@ -11,6 +11,7 @@ const ListRender = () => {
   const deleteRandom = () => {
     const randomNumber = Math.floor(Math.random() * 4);
 
+    {/* Pega o valor anterior de um dado */}
     setUsers((prevUsers) => {
       return prevUsers.filter((user) => randomNumber !== user.id);
     });
