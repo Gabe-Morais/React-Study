@@ -9,12 +9,13 @@ import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 import Fragment  from "./components/Fragment";
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 
 // caso seja necessario utilizar em vario lugarem e venha a trocar o caminho, só precisa trocar em um unico lugar
 
 function App() {
   //const name = "Julio";
-  const [userName] = useState("Matheus");
+  const [userName] = useState("Gabriel");
   
   const cars=[
     {id: 1, brand:"Ferrari", color:"Amarela", newCar: true, km: 0},
@@ -22,6 +23,10 @@ function App() {
     {id: 3, brand:"Renault", color:"Azul", newCar: false, km: 908},
   ]
 
+
+function showMessage(){
+  console.log("Evento do Componente pai")
+}
   return (
     <div className="App">
     <h1>Avançando em React</h1>
@@ -51,11 +56,12 @@ function App() {
       {/* destructuring */}
       <CarDetails brand="VW" km={100000} color="Azul" newCar={false}/>
 
-      {/*Reaproveitando*/}
+      {/*Reutilização de componentes utilzizando o props*/}
       <CarDetails brand="Fiat" color="Vermelha" km={2000} newCar={false}/>
       <CarDetails brand="Ford" color="Preto" km={0} newCar={true}/>
 
        {/* Loop em array de objetos */}
+       {/*Renderiza todos os objetos do array um por um */}
       {cars.map((car) => (
          <CarDetails 
          brand={car.brand}
@@ -70,6 +76,8 @@ function App() {
     <Container myValue="Testing">
     <p>E este é o conteúdo</p>
     </Container>
+
+    <ExecuteFunction myFunction={showMessage}/>
 
     </div>
   );

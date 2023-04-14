@@ -9,6 +9,7 @@ function CarDetails({brand, km, color, newCar }) {
             <li>KM: {km}</li>
             <li>Cor: {color}</li>
         </ul>
+        {/* se a condição for verdadeira ira exibir este componente*/}
         {newCar && <p>Este Carro é novo!</p>}
     </div>
   )
