@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Game.css";
 
 const Game = ({
@@ -11,6 +11,19 @@ const Game = ({
   guesses,
   score,
 }) => {
+  const [letter, setLetter] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Verify the letter on input
+    verifyLetter(letter);
+
+    // clears the input
+    setLetter("");
+
+    // focus again on the input
+  };
+
   return (
     <div className="game">
       <p className="points">
@@ -33,16 +46,23 @@ const Game = ({
         )}
       </div>
       <div className="letterContainer">
-        <p>Tente adivinhr uma letra da palavra:</p>
-        <form>
-          <input type="text" name="letter" maxLength="1" required />
+        <p>Tente adivinhar uma letra da palavra:</p>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="letter"
+            maxLength="1"
+            required
+            onChange={(e) => setLetter(e.target.value)}
+            value={letter}
+          />
           <button>Jogar!</button>
         </form>
       </div>
-      <div className="wrongLettersContainer">
-        <p>letras já utilizadas:</p>
+      <div className="wrongLetterContainer">
+        <p>Letras já utilizadas:</p>
         {wrongLetters.map((letter, i) => (
-          <span key={i}>{letter},</span>
+          <span key={i}>{letter}, </span>
         ))}
       </div>
     </div>
