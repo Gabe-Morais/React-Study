@@ -70,10 +70,58 @@ function App() {
   // process the letter input
   const verifyLetter = (letter) => {
     console.log(letter);
+    const normalizedLetter = letter.toLowerCase();
+
+    // check if letter has already been utilized
+    if (
+      guessedLetters.includes(normalizedLetter) ||
+      wrongLetters.includes(normalizedLetter)
+    ) {
+      return;
+    }
+
+    // push guessed letter or remove a chance
+    if (letters.includes(normalizedLetter)) {
+      // if the word has a letter, add normalizedLetter to the current GuessedLetter array
+      setGuessedLetters((currentGuessedLetters) => [
+        ...currentGuessedLetters,
+        normalizedLetter,
+      ]);
+    } else {
+      // if not, does the same to the setWrongLetters
+      setWrongLetters((currentWrongLetters) => [
+        ...currentWrongLetters,
+        normalizedLetter,
+      ]);
+      setGuesses((currentGuesses) => currentGuesses - 1);
+    }
   };
 
+  const clearLetterStates = () => {
+    setGuessedLetters([]);
+    setWrongLetters([]);
+  };
+
+  /* useEffect tracks changes in the application. In this case we will use it to track when the guesses end up,
+  so we can reset all states and render the game over page*/
+  // check if guesses ended
+  useEffect(() => {
+    if (guesses <= 0) {
+      // reset all states
+      clearLetterStates();
+
+      // rendering game over page
+      setGameStage(stages[2].name);
+    }
+  }, [guesses]);
+
   // Restarts the game
+
   const retry = () => {
+    // reset score and guesses
+    setScore(0);
+    setGuesses(3);
+
     setGameStage(stages[0].name);
   };
 
