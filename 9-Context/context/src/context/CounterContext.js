@@ -1,5 +1,7 @@
+// import createContext
 import { createContext, useState } from "react";
 
+// Exportanto context
 export const CounterContext = createContext();
 
 // Criar Provider
