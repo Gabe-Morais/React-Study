@@ -4,7 +4,7 @@
 
 ###
 
-<p align="left">Repository for my React studies</p>
+<p align="left">Repositório para meus estudos de React</p>
 
 ###
 
@@ -25,10 +25,10 @@
 
 ###
 
-<p align="left">What is React?</p>
+<p align="left">Oque é React?</p>
 
 ###
 
-<h6 align="left">The React.js framework is an open-source JavaScript framework and library developed by Facebook. It’s used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript.</h6>
+<h6 align="left">A estrutura React.js é uma estrutura e biblioteca JavaScript de código aberto desenvolvida pelo Facebook. Ele é usado para construir interfaces de usuário interativas e aplicativos da web de forma rápida e eficiente, com significativamente menos código do que você faria com JavaScript básico.</h6>
 
 ###
